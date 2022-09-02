@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="style.css" rel="stylesheet" type="text/css">
+
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div>
-
         <div class="topbar">
             <div>
                 <p> Logo </p>
@@ -22,8 +23,23 @@
                 <p role="listitem"> O nas </p>
             </div>
 
-            <div>
+            <div class="topbar__user">
                 <p> User </p>
+            </div>
+
+            <div class="topbar__menu">
+                <img src="burger.png" alt="Menu" onclick="openMobileMenu()"/>
+                <div id="dropdown_menu"
+                     class="topbar__menu--dropdown topbar__menu--dropdown--hidden">
+                    <div role="list"
+                         class="topbar__nav--mobile">
+                        <p role="listitem" onclick="closeMobileMenu()"> X </p>
+                        <p role="listitem"> Strona główna </p>
+                        <p role="listitem"> Sklep </p>
+                        <p role="listitem"> O nas </p>
+                        <p role="listitem"> User </p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -82,7 +98,6 @@
             </div>
 
         </div>
-
     </div>
 </body>
 </html>

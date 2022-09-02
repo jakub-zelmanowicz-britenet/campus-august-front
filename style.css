@@ -54,4 +54,30 @@ body {
     .item {
         width: 100%;
     }
+
+    .topbar__nav {
+        display: none;
+    }
+
+    .topbar__user {
+        display: none;
+    }
+
+    .topbar__menu--dropdown {
+        position: absolute;
+        background: white;
+        padding: 5px;
+        top: 0;
+        right: 0;
+    }
+
+    .topbar__menu--dropdown--hidden {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .topbar__menu {
+        display: none;
+    }
 }
