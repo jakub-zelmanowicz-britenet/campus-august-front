@@ -10,6 +10,7 @@
 
     <script src="script.js" defer></script>
     <script src="productService.js" defer></script>
+    <script src="authService.js" defer></script>
 </head>
 <body>
     <div>
@@ -42,6 +43,18 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div>
+
+            <form onsubmit="return performLogin()">
+
+                <input id="username" type="text" placeholder="Username ...">
+                <input id="password" type="password" placeholder="Password ...">
+                <input type="submit" value="Zaloguj">
+
+            </form>
+
         </div>
 
         <div id="items" class="items">
