@@ -11,11 +11,17 @@ const login = async (username, password) => {
             })
         });
 
-        const auth_data = await response.json();
-        console.log(auth_data.userId);
-        sessionStorage.setItem('user_id', auth_data.userId);
-        sessionStorage.setItem('user_token', auth_data.token);
-        return Promise.resolve();
+        if (response.ok) {
+            const auth_data = await response.json();
+            console.log(auth_data.userId);
+            sessionStorage.setItem('user_id', auth_data.userId);
+            sessionStorage.setItem('user_token', auth_data.token);
+            return Promise.resolve();
+        }
+        else {
+            return Promise.reject();
+        }
+
     } catch (e) {
         return Promise.reject(e);
     }
